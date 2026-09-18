@@ -15,8 +15,6 @@ $user = $result->fetch_assoc();
 $session_id = uniqid();
 
 $redis->set("session_" . $session_id, $user["id"]);
-echo $session_id;
-
-} else {
-echo "Invalid username or password!!!";}
+echo $session_id;} else {
+echo "Invalid credentials!!!";}
 ?>
