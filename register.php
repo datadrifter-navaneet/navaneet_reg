@@ -8,8 +8,7 @@ $reg = $conn->prepare("INSERT INTO users(username, password, email)VALUES(?,?,?)
 $reg->bind_param("sss",$username,$password,$email);
 if ($reg->execute()) {
     echo "Registration is successful, THANK YOU!";
-} else {
-    echo "Registration failed: " . $reg->error;
-}
-
+} 
+else {
+    echo "Registration failed: " . $reg->error;}
 ?>
